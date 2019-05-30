@@ -220,8 +220,14 @@ public class MainActivity extends AppCompatActivity {
                     multi=false;
                 }
                 if (divide==true) {
-                    textView.setText(val1/val2+"");
-                    divide=false;
+                    if(val2==0){
+                        textView.setText("Can't divide by zero");
+                        divide=false;
+                    }else{
+                        textView.setText(val1/val2+"");
+                        divide=false;
+                    }
+
                 }
                 if (percent==true) {
                     float inc=val2-val1;
